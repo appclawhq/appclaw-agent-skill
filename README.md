@@ -106,8 +106,13 @@ Once active, the skill guides the agent to:
 
 The canonical instructions live in
 [`skills/use-appclaw-agent-cli/SKILL.md`](skills/use-appclaw-agent-cli/SKILL.md)
-(Claude + Codex) and [`GEMINI.md`](GEMINI.md) (Gemini) — keep the two in sync
-when editing.
+(Claude + Codex). [`GEMINI.md`](GEMINI.md) is **generated** from it — edit
+`SKILL.md`, then run:
+
+```bash
+scripts/sync-gemini.sh           # regenerate GEMINI.md
+scripts/sync-gemini.sh --check   # CI guard: fail if GEMINI.md is stale
+```
 
 ## Repository layout
 
@@ -120,7 +125,9 @@ appclaw-agent-skill/
 │   └── use-appclaw-agent-cli/
 │       └── SKILL.md           # Claude Code skill + Codex Agent Skill
 ├── gemini-extension.json      # Gemini CLI extension manifest
-├── GEMINI.md                  # Gemini CLI context (mirrors SKILL.md body)
+├── GEMINI.md                  # Gemini CLI context (generated from SKILL.md)
+├── scripts/
+│   └── sync-gemini.sh         # regenerate GEMINI.md from SKILL.md
 └── README.md
 ```
 

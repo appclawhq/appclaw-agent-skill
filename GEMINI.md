@@ -2,7 +2,7 @@
 
 When the user asks you to operate or inspect a mobile device interactively
 (open an app, tap a button, check visibility, etc.) using terminal commands
-rather than a YAML flow, drive the `appclaw-agent` CLI as follows.
+rather than a YAML flow:
 
 1. Verify that `appclaw-agent` is installed (`command -v appclaw-agent`). If it
    is missing, tell the user to install it with `npm install -g appclaw-agent`.

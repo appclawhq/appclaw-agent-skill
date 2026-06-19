@@ -70,7 +70,7 @@ All commands take `appclaw-agent --session <name> <command>`. The tap verb is
 For every assertion or verification step:
 
 1. Take a screenshot: `appclaw-agent --session <name> screenshot /tmp/<name>.png`
-2. Read the screenshot image with the Read tool and visually analyze what is actually rendered on screen.
+2. Read the screenshot image and visually analyze what is actually rendered on screen.
 3. Base your pass/fail verdict **only on what you can see in the screenshot**, not on DOM presence.
 4. If the target content is not clearly visible in the screenshot, the assertion **fails** — even if a DOM element exists for it.
 
