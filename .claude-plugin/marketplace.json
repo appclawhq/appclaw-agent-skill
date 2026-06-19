@@ -1,0 +1,15 @@
+{
+  "name": "appclaw-agent-skill",
+  "owner": {
+    "name": "agentfarmhq",
+    "email": "krishnacodes321@gmail.com"
+  },
+  "description": "Marketplace for the AppClaw agent skill — interactive mobile automation via the appclaw-agent CLI.",
+  "plugins": [
+    {
+      "name": "appclaw",
+      "source": "./",
+      "description": "Drive and inspect mobile apps interactively via the appclaw-agent CLI — open apps, press/fill elements, scroll, and verify on-screen state with screenshots."
+    }
+  ]
+}
