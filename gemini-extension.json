@@ -1,0 +1,6 @@
+{
+  "name": "use-appclaw-agent-cli",
+  "version": "1.0.0",
+  "description": "Drive and inspect mobile apps interactively via the appclaw-agent CLI — open apps, press/fill elements, scroll, and verify on-screen state with screenshots.",
+  "contextFileName": "GEMINI.md"
+}
