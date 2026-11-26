@@ -3,10 +3,10 @@
   "description": "Drive and inspect mobile apps interactively via the appclaw-agent CLI — open apps, press/fill elements, scroll, and verify on-screen state with screenshots.",
   "version": "1.0.0",
   "author": {
-    "name": "agentfarmhq",
+    "name": "saikrishna321",
     "email": "krishnacodes321@gmail.com"
   },
-  "homepage": "https://github.com/agentfarmhq/appclaw-agent-skill",
-  "repository": "https://github.com/agentfarmhq/appclaw-agent-skill",
+  "homepage": "https://github.com/appclawhq/appclaw-agent-skill",
+  "repository": "https://github.com/appclawhq/appclaw-agent-skill",
   "license": "MIT"
 }

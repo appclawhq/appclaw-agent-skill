@@ -28,7 +28,7 @@ the [AppClaw](https://github.com/AppiumTestDistribution/AppClaw) project.
 ### Plugin marketplace (recommended)
 
 ```
-/plugin marketplace add agentfarmhq/appclaw-agent-skill
+/plugin marketplace add appclawhq/appclaw-agent-skill
 /plugin install appclaw@appclaw-agent-skill
 ```
 
@@ -72,7 +72,7 @@ Gemini uses an **extension** (this repo's root `gemini-extension.json` +
 `GEMINI.md`). Install straight from git:
 
 ```bash
-gemini extensions install https://github.com/agentfarmhq/appclaw-agent-skill
+gemini extensions install https://github.com/appclawhq/appclaw-agent-skill
 ```
 
 Once installed, the `GEMINI.md` context is loaded automatically, so just ask
@@ -110,9 +110,12 @@ The canonical instructions live in
 `SKILL.md`, then run:
 
 ```bash
-scripts/sync-gemini.sh           # regenerate GEMINI.md
-scripts/sync-gemini.sh --check   # CI guard: fail if GEMINI.md is stale
+awk 'NR==1&&$0=="---"{f=1;next} f&&$0=="---"{f=0;b=1;next} b' \
+  skills/use-appclaw-agent-cli/SKILL.md | sed -e '/./,$!d' > GEMINI.md
 ```
+
+(This strips the YAML frontmatter. The repo ships no scripts because the Claude
+plugin directory only accepts Markdown, JSON, YAML, and image files.)
 
 ## Repository layout
 
@@ -120,14 +123,13 @@ scripts/sync-gemini.sh --check   # CI guard: fail if GEMINI.md is stale
 appclaw-agent-skill/
 ├── .claude-plugin/            # Claude Code plugin + marketplace
 │   ├── plugin.json
-│   └── marketplace.json
+│   ├── marketplace.json
+│   └── icon.png
 ├── skills/
 │   └── use-appclaw-agent-cli/
 │       └── SKILL.md           # Claude Code skill + Codex Agent Skill
 ├── gemini-extension.json      # Gemini CLI extension manifest
 ├── GEMINI.md                  # Gemini CLI context (generated from SKILL.md)
-├── scripts/
-│   └── sync-gemini.sh         # regenerate GEMINI.md from SKILL.md
 └── README.md
 ```
 
