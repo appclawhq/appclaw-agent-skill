@@ -123,8 +123,7 @@ plugin directory only accepts Markdown, JSON, YAML, and image files.)
 appclaw-agent-skill/
 ├── .claude-plugin/            # Claude Code plugin + marketplace
 │   ├── plugin.json
-│   ├── marketplace.json
-│   └── icon.png
+│   └── marketplace.json
 ├── skills/
 │   └── use-appclaw-agent-cli/
 │       └── SKILL.md           # Claude Code skill + Codex Agent Skill
